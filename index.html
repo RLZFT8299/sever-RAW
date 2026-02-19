@@ -772,6 +772,22 @@
         .content-section.active {
             display: block;
         }
+
+        /* ===== 新增表单控件样式 ===== */
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: var(--transition);
+            background-color: #f9f9f9;
+        }
+        .form-control:focus {
+            outline: none;
+            border-color: var(--gradient-blue-2);
+            box-shadow: 0 0 0 3px rgba(38, 208, 206, 0.2);
+        }
     </style>
 </head>
 <body>
@@ -788,7 +804,6 @@
         </div>
         
         <div class="new-sidebar-content">
-            <!-- 快捷链接更改 -->
             <div class="new-sidebar-section">
                 <h3><i class="fas fa-link"></i> 快捷链接</h3>
                 <ul class="new-sidebar-links">
@@ -799,7 +814,6 @@
                     <li><a href="#contact" data-section="contact"><i class="fas fa-envelope"></i> 联系我</a></li>
                 </ul>
             </div>
-            <!-- 重要数据更改 -->
             <div class="new-sidebar-section">
                 <h3><i class="fas fa-rocket"></i> 重要数据</h3>
                 <div class="new-sidebar-stats">
@@ -817,17 +831,16 @@
                     </div>
                 </div>
             </div>
-            <!-- 外部链接更改 -->
             <div class="new-sidebar-section">
                 <h3><i class="fas fa-external-link-alt"></i> 外部链接</h3>
                 <ul class="new-sidebar-links">
-                    <li><a href="http://lhy.cpolar.top" target="_blank"><i class="fas fa-globe"></i> 老李论坛</a></li>
-                    <li><a href="https://littleskin.cn" target="_blank"><i class="fas fa-paint-brush"></i> LittleSkin官网</a></li>
-                    <li><a href="https://github.com/RLZFT8299" target="_blank"><i class="fab fa-github"></i> GitHub主页</a></li>
-                    <li><a href="https://space.bilibili.com/1437096187" target="_blank"><i class="fab fa-bilibili"></i> B站主页</a></li>
+                    <!-- 为所有 target="_blank" 添加 rel="noopener noreferrer" -->
+                    <li><a href="http://lhy.cpolar.top" target="_blank" rel="noopener noreferrer"><i class="fas fa-globe"></i> 老李论坛</a></li>
+                    <li><a href="https://littleskin.cn" target="_blank" rel="noopener noreferrer"><i class="fas fa-paint-brush"></i> LittleSkin官网</a></li>
+                    <li><a href="https://github.com/RLZFT8299" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub主页</a></li>
+                    <li><a href="https://space.bilibili.com/1437096187" target="_blank" rel="noopener noreferrer"><i class="fab fa-bilibili"></i> B站主页</a></li>
                 </ul>
             </div>
-            <!-- 网站信息更改 -->
             <div class="new-sidebar-section">
                 <h3><i class="fas fa-info-circle"></i> 网站信息</h3>
                 <p style="color: var(--text-light); font-size: 0.9rem; line-height: 1.5;">这是一个展示个人作品和技术的网站，主要包含我的世界相关内容和技术分享。</p>
@@ -861,7 +874,7 @@
                 <li><a href="#contact" data-section="contact">联系我</a></li>
             </ul>
         </nav>
-        <!-- 主要内容区1 -->
+        <!-- 主要内容区 -->
         <div class="main-content">
             <aside class="sidebar">
                 <div class="profile">
@@ -870,10 +883,11 @@
                     <p class="profile-title">Java开发者 & 闲人</p>
                     <p>一名中学生，喜欢玩我的世界，会写一点代码。</p>
                     <div class="social-links">
-                        <a href="https://github.com/RLZFT8299" title="GitHub" target="_blank"><i class="fab fa-github"></i></a>
-                        <a href="https://littleskin.cn" title="LittleSkin" target="_blank"><i class="fab fa-gitlab"></i></a>
-                        <a href="https://space.bilibili.com/1437096187?spm_id_from=333.337.0.0" title="Bilibili" target="_blank"><i class="fab fa-bilibili"></i></a>
-                        <a href="mailto:18258818299@example.com" title="邮箱"><i class="fab fa-envelope"></i></a>
+                        <!-- 修正邮箱图标为 fas -->
+                        <a href="https://github.com/RLZFT8299" title="GitHub" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+                        <a href="https://littleskin.cn" title="LittleSkin" target="_blank" rel="noopener noreferrer"><i class="fab fa-gitlab"></i></a>
+                        <a href="https://space.bilibili.com/1437096187?spm_id_from=333.337.0.0" title="Bilibili" target="_blank" rel="noopener noreferrer"><i class="fab fa-bilibili"></i></a>
+                        <a href="mailto:18258818299@example.com" title="邮箱"><i class="fas fa-envelope"></i></a>
                     </div>
                 </div>
                 
@@ -973,57 +987,49 @@
                     <div class="forum-section">
                         <div class="forum-header">
                             <i class="fas fa-cube"></i>
-                            <h2>我的世界专栏 - LittleSkin 数据</h2>
+                            <h2>"此内容还没想好，请等待后续更新"</h2>
                         </div>
-                        <p style="color: var(--text-light);">以下是我在LittleSkin平台上的皮肤创作数据统计。</p>
+                        <p style="color: var(--text-light);">"此内容还没想好，请等待后续更新"</p>
                     </div>
                     
                     <div class="content-card">
-                        <h3><i class="fas fa-chart-line"></i> 数据统计</h3>
-                        <p style="margin-bottom: 2rem; color: var(--text-light);">以下是我在LittleSkin平台的创作统计数据：</p>
+                        <h3><i class="fas fa-chart-line"></i>"此内容还没想好，请等待后续更新"</h3>
+                        <p style="margin-bottom: 2rem; color: var(--text-light);">"此内容还没想好，请等待后续更新"</p>
                         
                         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-bottom: 2.5rem;">
-                            <div style="background-color: white; border-radius: var(--border-radius); padding: 2rem; box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08); display: flex; align-items: center; border: 1px solid rgba(52, 152, 219, 0.1); transition: var(--transition);">
-                                <div style="width: 75px; height: 75px; background: linear-gradient(135deg, var(--gradient-blue-1), var(--gradient-blue-2)); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 1.5rem; color: white; font-size: 2.2rem; box-shadow: 0 6px 15px rgba(52, 152, 219, 0.3);">
-                                    <i class="fas fa-palette"></i>
-                                </div>
+                            <!-- 第一个卡片：删除圆形图标容器，只保留文本 -->
+                            <div style="background-color: white; border-radius: var(--border-radius); padding: 2rem; box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08); border: 1px solid rgba(52, 152, 219, 0.1); transition: var(--transition);">
                                 <div>
-                                    <h4 style="color: var(--text-light); margin-bottom: 0.5rem; font-size: 1.1rem; font-weight: 600;">皮肤总数</h4>
-                                    <div style="color: var(--gradient-blue-1); font-size: 2.4rem; font-weight: 800; line-height: 1;">4</div>
-                                    <div style="color: var(--text-light); font-size: 0.95rem; margin-top: 5px;">已创作的皮肤</div>
+                                    <h4 style="color: var(--text-light); margin-bottom: 0.5rem; font-size: 1.1rem; font-weight: 600;">"此内容还没想好，请等待后续更新"</h4>
+                                    <div style="color: var(--gradient-blue-1); font-size: 2.4rem; font-weight: 800; line-height: 1;">-</div>
+                                    <div style="color: var(--text-light); font-size: 0.95rem; margin-top: 5px;">"此内容还没想好，请等待后续更新"</div>
                                 </div>
                             </div>
                             
-                            <div style="background-color: white; border-radius: var(--border-radius); padding: 2rem; box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08); display: flex; align-items: center; border: 1px solid rgba(52, 152, 219, 0.1); transition: var(--transition);">
-                                <div style="width: 75px; height: 75px; background: linear-gradient(135deg, var(--gradient-blue-1), var(--gradient-blue-2)); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 1.5rem; color: white; font-size: 2.2rem; box-shadow: 0 6px 15px rgba(52, 152, 219, 0.3);">
-                                    <i class="fas fa-download"></i>
-                                </div>
+                            <!-- 第二个卡片 -->
+                            <div style="background-color: white; border-radius: var(--border-radius); padding: 2rem; box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08); border: 1px solid rgba(52, 152, 219, 0.1); transition: var(--transition);">
                                 <div>
-                                    <h4 style="color: var(--text-light); margin-bottom: 0.5rem; font-size: 1.1rem; font-weight: 600;">总下载量</h4>
-                                    <div style="color: var(--gradient-blue-1); font-size: 2.4rem; font-weight: 800; line-height: 1;">2,847</div>
-                                    <div style="color: var(--text-light); font-size: 0.95rem; margin-top: 5px;">皮肤被下载次数</div>
+                                    <h4 style="color: var(--text-light); margin-bottom: 0.5rem; font-size: 1.1rem; font-weight: 600;">"此内容还没想好，请等待后续更新"</h4>
+                                    <div style="color: var(--gradient-blue-1); font-size: 2.4rem; font-weight: 800; line-height: 1;">-</div>
+                                    <div style="color: var(--text-light); font-size: 0.95rem; margin-top: 5px;">"此内容还没想好，请等待后续更新"</div>
                                 </div>
                             </div>
                             
-                            <div style="background-color: white; border-radius: var(--border-radius); padding: 2rem; box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08); display: flex; align-items: center; border: 1px solid rgba(52, 152, 219, 0.1); transition: var(--transition);">
-                                <div style="width: 75px; height: 75px; background: linear-gradient(135deg, var(--gradient-blue-1), var(--gradient-blue-2)); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 1.5rem; color: white; font-size: 2.2rem; box-shadow: 0 6px 15px rgba(52, 152, 219, 0.3);">
-                                    <i class="fas fa-heart"></i>
-                                </div>
+                            <!-- 第三个卡片 -->
+                            <div style="background-color: white; border-radius: var(--border-radius); padding: 2rem; box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08); border: 1px solid rgba(52, 152, 219, 0.1); transition: var(--transition);">
                                 <div>
-                                    <h4 style="color: var(--text-light); margin-bottom: 0.5rem; font-size: 1.1rem; font-weight: 600;">收藏数</h4>
-                                    <div style="color: var(--gradient-blue-1); font-size: 2.4rem; font-weight: 800; line-height: 1;">126</div>
-                                    <div style="color: var(--text-light); font-size: 0.95rem; margin-top: 5px;">被用户收藏次数</div>
+                                    <h4 style="color: var(--text-light); margin-bottom: 0.5rem; font-size: 1.1rem; font-weight: 600;">"此内容还没想好，请等待后续更新"</h4>
+                                    <div style="color: var(--gradient-blue-1); font-size: 2.4rem; font-weight: 800; line-height: 1;">-</div>
+                                    <div style="color: var(--text-light); font-size: 0.95rem; margin-top: 5px;">"此内容还没想好，请等待后续更新"</div>
                                 </div>
                             </div>
                             
-                            <div style="background-color: white; border-radius: var(--border-radius); padding: 2rem; box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08); display: flex; align-items: center; border: 1px solid rgba(52, 152, 219, 0.1); transition: var(--transition);">
-                                <div style="width: 75px; height: 75px; background: linear-gradient(135deg, var(--gradient-blue-1), var(--gradient-blue-2)); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 1.5rem; color: white; font-size: 2.2rem; box-shadow: 0 6px 15px rgba(52, 152, 219, 0.3);">
-                                    <i class="fas fa-users"></i>
-                                </div>
+                            <!-- 第四个卡片 -->
+                            <div style="background-color: white; border-radius: var(--border-radius); padding: 2rem; box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08); border: 1px solid rgba(52, 152, 219, 0.1); transition: var(--transition);">
                                 <div>
-                                    <h4 style="color: var(--text-light); margin-bottom: 0.5rem; font-size: 1.1rem; font-weight: 600;">使用人数</h4>
-                                    <div style="color: var(--gradient-blue-1); font-size: 2.4rem; font-weight: 800; line-height: 1;">692</div>
-                                    <div style="color: var(--text-light); font-size: 0.95rem; margin-top: 5px;">正在使用我的皮肤</div>
+                                    <h4 style="color: var(--text-light); margin-bottom: 0.5rem; font-size: 1.1rem; font-weight: 600;">"此内容还没想好，请等待后续更新"</h4>
+                                    <div style="color: var(--gradient-blue-1); font-size: 2.4rem; font-weight: 800; line-height: 1;">-</div>
+                                    <div style="color: var(--text-light); font-size: 0.95rem; margin-top: 5px;">"此内容还没想好，请等待后续更新"</div>
                                 </div>
                             </div>
                         </div>
@@ -1068,7 +1074,8 @@
                                         <div class="loading-spinner"></div>
                                         <p>正在加载老李不会飞的博客...</p>
                                     </div>
-                                    <iframe id="external-site" src="http://lhy.cpolar.top" onload="iframeLoaded()"></iframe>
+                                    <!-- 添加 onerror 处理，加载失败时隐藏 loading 并显示提示 -->
+                                    <iframe id="external-site" src="http://lhy.cpolar.top" onload="iframeLoaded()" onerror="iframeLoadError()"></iframe>
                                 </div>
                             </div>
                             
@@ -1080,19 +1087,19 @@
                                         <div style="padding: 1.5rem; background: linear-gradient(135deg, rgba(26, 41, 128, 0.05), rgba(38, 208, 206, 0.05)); border-radius: var(--border-radius); border: 1px solid rgba(52, 152, 219, 0.1);">
                                             <h5 style="color: var(--gradient-blue-1); margin-bottom: 0.8rem;">LittleSkin官网</h5>
                                             <p style="color: var(--text-light); margin-bottom: 1rem; font-size: 0.95rem;">我的世界皮肤托管和分享平台</p>
-                                            <a href="https://littleskin.cn" target="_blank" style="color: var(--gradient-blue-2); text-decoration: none; font-weight: 500;">访问网站</a>
+                                            <a href="https://littleskin.cn" target="_blank" rel="noopener noreferrer" style="color: var(--gradient-blue-2); text-decoration: none; font-weight: 500;">访问网站</a>
                                         </div>
                                         
                                         <div style="padding: 1.5rem; background: linear-gradient(135deg, rgba(26, 41, 128, 0.05), rgba(38, 208, 206, 0.05)); border-radius: var(--border-radius); border: 1px solid rgba(52, 152, 219, 0.1);">
                                             <h5 style="color: var(--gradient-blue-1); margin-bottom: 0.8rem;">我的世界官网</h5>
                                             <p style="color: var(--text-light); margin-bottom: 1rem; font-size: 0.95rem;">官方我的世界游戏网站</p>
-                                            <a href="https://minecraft.net" target="_blank" style="color: var(--gradient-blue-2); text-decoration: none; font-weight: 500;">访问网站</a>
+                                            <a href="https://minecraft.net" target="_blank" rel="noopener noreferrer" style="color: var(--gradient-blue-2); text-decoration: none; font-weight: 500;">访问网站</a>
                                         </div>
                                         
                                         <div style="padding: 1.5rem; background: linear-gradient(135deg, rgba(26, 41, 128, 0.05), rgba(38, 208, 206, 0.05)); border-radius: var(--border-radius); border: 1px solid rgba(52, 152, 219, 0.1);">
                                             <h5 style="color: var(--gradient-blue-1); margin-bottom: 0.8rem;">GitHub</h5>
                                             <p style="color: var(--text-light); margin-bottom: 1rem; font-size: 0.95rem;">代码托管和开源项目平台</p>
-                                            <a href="https://github.com" target="_blank" style="color: var(--gradient-blue-2); text-decoration: none; font-weight: 500;">访问网站</a>
+                                            <a href="https://github.com" target="_blank" rel="noopener noreferrer" style="color: var(--gradient-blue-2); text-decoration: none; font-weight: 500;">访问网站</a>
                                         </div>
                                     </div>
                                 </div>
@@ -1106,19 +1113,19 @@
                                         <div style="padding: 1.5rem; background: linear-gradient(135deg, rgba(26, 41, 128, 0.05), rgba(38, 208, 206, 0.05)); border-radius: var(--border-radius); border: 1px solid rgba(52, 152, 219, 0.1);">
                                             <h5 style="color: var(--gradient-blue-1); margin-bottom: 0.8rem;">PCL2太太太太棒了</h5>
                                             <p style="color: var(--text-light); margin-bottom: 1rem; font-size: 0.95rem;">下载PCL2</p>
-                                            <a href="https://github.com/Meloong-Git/PCL" target="_blank" style="color: var(--gradient-blue-2); text-decoration: none; font-weight: 500;">访问工具</a>
+                                            <a href="https://github.com/Meloong-Git/PCL" target="_blank" rel="noopener noreferrer" style="color: var(--gradient-blue-2); text-decoration: none; font-weight: 500;">访问工具</a>
                                         </div>
                                         
                                         <div style="padding: 1.5rem; background: linear-gradient(135deg, rgba(26, 41, 128, 0.05), rgba(38, 208, 206, 0.05)); border-radius: var(--border-radius); border: 1px solid rgba(52, 152, 219, 0.1);">
                                             <h5 style="color: var(--gradient-blue-1); margin-bottom: 0.8rem;">材质包制作</h5>
                                             <p style="color: var(--text-light); margin-bottom: 1rem; font-size: 0.95rem;">我的世界材质包制作教程</p>
-                                            <a href="https://www.planetminecraft.com/resources/texture-packs" target="_blank" style="color: var(--gradient-blue-2); text-decoration: none; font-weight: 500;">访问资源</a>
+                                            <a href="https://www.planetminecraft.com/resources/texture-packs" target="_blank" rel="noopener noreferrer" style="color: var(--gradient-blue-2); text-decoration: none; font-weight: 500;">访问资源</a>
                                         </div>
                                         
                                         <div style="padding: 1.5rem; background: linear-gradient(135deg, rgba(26, 41, 128, 0.05), rgba(38, 208, 206, 0.05)); border-radius: var(--border-radius); border: 1px solid rgba(52, 152, 219, 0.1);">
                                             <h5 style="color: var(--gradient-blue-1); margin-bottom: 0.8rem;">皮肤预览器</h5>
                                             <p style="color: var(--text-light); margin-bottom: 1rem; font-size: 0.95rem;">在线预览我的世界皮肤效果</p>
-                                            <a href="https://www.minecraftskinviewer.com" target="_blank" style="color: var(--gradient-blue-2); text-decoration: none; font-weight: 500;">访问工具</a>
+                                            <a href="https://www.minecraftskinviewer.com" target="_blank" rel="noopener noreferrer" style="color: var(--gradient-blue-2); text-decoration: none; font-weight: 500;">访问工具</a>
                                         </div>
                                     </div>
                                 </div>
@@ -1127,7 +1134,7 @@
                     </div>
                 </section>
                 
-                <!-- 关于我内容（简化版） -->
+                <!-- 关于我内容 -->
                 <section id="about-section" class="content-section">
                     <div class="content-card">
                         <h3><i class="fas fa-user"></i> 关于我</h3>
@@ -1138,14 +1145,13 @@
                                 <i class="fas fa-gamepad" style="font-size: 3.5rem; color: var(--gradient-blue-2);"></i>
                             </div>
                             <div>
-                                <h4 style="color: var(--gradient-blue-1); margin-bottom: 0.8rem; font-size: 1.3rem;">香橙派太好玩了</h5>
+                                <!-- 修复 h4 标签未正确闭合的问题 -->
+                                <h4 style="color: var(--gradient-blue-1); margin-bottom: 0.8rem; font-size: 1.3rem;">香橙派太好玩了</h4>
                                 <p style="color: var(--text-light);">你猜猜香橙派是哪里来的，学校的！我们在一定的条件下把它卡出来，在上面开了一个"服务器"</p>
                             </div>
                         </div>
                         
-                        <p></p>
-                        
-                        <p></p>
+                        <!-- 移除多余的空段落 -->
                         
                         <div class="section-divider"></div>
                         <!--信息位置-->
@@ -1185,6 +1191,7 @@
                         
                         <div style="margin: 2.5rem 0;">
                             <div style="display: flex; align-items: center; margin-bottom: 1.5rem; padding: 1.5rem; background: linear-gradient(135deg, rgba(26, 41, 128, 0.05), rgba(38, 208, 206, 0.05)); border-radius: var(--border-radius); border: 1px solid rgba(52, 152, 219, 0.15);">
+                                <!-- 修正邮箱图标为 fas -->
                                 <i class="fas fa-envelope" style="color: var(--gradient-blue-2); margin-right: 20px; font-size: 1.8rem;"></i>
                                 <div>
                                     <div style="font-weight: 700; color: var(--gradient-blue-1); margin-bottom: 5px;">邮箱</div>
@@ -1195,14 +1202,14 @@
                                 <i class="fab fa-discord" style="color: var(--gradient-blue-2); margin-right: 20px; font-size: 1.8rem;"></i>
                                 <div>
                                     <div style="font-weight: 700; color: var(--gradient-blue-1); margin-bottom: 5px;">前往B站主页</div>
-                                    <div style="color: var(--text-light);"><a href="https://space.bilibili.com/1437096187?spm_id_from=333.337.0.0" target="_blank" style="color: var(--gradient-blue-2); text-decoration: none; font-weight: 500;">日落在福田</a></div>
+                                    <div style="color: var(--text-light);"><a href="https://space.bilibili.com/1437096187?spm_id_from=333.337.0.0" target="_blank" rel="noopener noreferrer" style="color: var(--gradient-blue-2); text-decoration: none; font-weight: 500;">日落在福田</a></div>
                                 </div>
                             </div>
                             <div style="display: flex; align-items: center; padding: 1.5rem; background: linear-gradient(135deg, rgba(26, 41, 128, 0.05), rgba(38, 208, 206, 0.05)); border-radius: var(--border-radius); border: 1px solid rgba(52, 152, 219, 0.15);">
                                 <i class="fas fa-link" style="color: var(--gradient-blue-2); margin-right: 20px; font-size: 1.8rem;"></i>
                                 <div>
                                     <div style="font-weight: 700; color: var(--gradient-blue-1); margin-bottom: 5px;">LittleSkin主页</div>
-                                    <div style="color: var(--text-light);"><a href="https://littleskin.cn" target="_blank" style="color: var(--gradient-blue-2); text-decoration: none; font-weight: 500;">https://littleskin.cn</a></div>
+                                    <div style="color: var(--text-light);"><a href="https://littleskin.cn" target="_blank" rel="noopener noreferrer" style="color: var(--gradient-blue-2); text-decoration: none; font-weight: 500;">https://littleskin.cn</a></div>
                                 </div>
                             </div>
                         </div>
@@ -1213,6 +1220,7 @@
                         <form class="contact-form">
                             <div class="form-group" style="margin-bottom: 1.8rem;">
                                 <label for="name" style="display: block; margin-bottom: 0.8rem; font-weight: 600; color: var(--gradient-blue-1);">姓名</label>
+                                <!-- 添加 class="form-control" -->
                                 <input type="text" id="name" class="form-control" placeholder="请输入您的姓名">
                             </div>
                             
@@ -1240,15 +1248,14 @@
     </div>
     
     <footer>
-        <!-- 页脚内容已修复 -->
         <div class="container">
             <div class="footer-links">
                 <a href="#" data-section="home">首页</a>
                 <a href="#" data-section="minecraft">我的世界专栏</a>
                 <a href="#" data-section="forum">论坛</a>
-                <a href="http://lhy.cpolar.top" target="_blank">老李论坛</a>
-                <a href="https://github.com/RLZFT8299" target="_blank">GitHub主页</a>
-                <a href="https://minecraft.net" target="_blank">我的世界官网</a>
+                <a href="http://lhy.cpolar.top" target="_blank" rel="noopener noreferrer">老李论坛</a>
+                <a href="https://github.com/RLZFT8299" target="_blank" rel="noopener noreferrer">GitHub主页</a>
+                <a href="https://minecraft.net" target="_blank" rel="noopener noreferrer">我的世界官网</a>
             </div>
             <div style="margin: 2rem 0;">
                 <div style="display: flex; justify-content: center; gap: 15px;">
@@ -1257,7 +1264,6 @@
                     <div style="width: 40px; height: 40px; background: linear-gradient(135deg, var(--gradient-blue-1), var(--gradient-blue-4)); border-radius: 8px; opacity: 0.8;"></div>
                 </div>
             </div>
-            <!-- 版权信息 -->
             <p class="copyright">© 2025-2035日落在福田个人站 保留所有权利 </p>
             <p class="copyright" style="margin-top: 0.8rem;">网站采用渐变蓝色设计，背景图片来自 Unsplash</p>
         </div>
@@ -1270,7 +1276,6 @@
         const sidebarOverlay = document.getElementById('sidebarOverlay');
         let sidebarOpen = false;
         
-        // 切换侧边栏
         function toggleNewSidebar() {
             sidebarOpen = !sidebarOpen;
             
@@ -1286,193 +1291,134 @@
         }
         
         newSidebarToggle.addEventListener('click', toggleNewSidebar);
-        
-        // 点击遮罩层关闭侧边栏
         sidebarOverlay.addEventListener('click', toggleNewSidebar);
         
-        // 点击新建侧边栏中的链接时关闭侧边栏
         document.querySelectorAll('.new-sidebar-links a').forEach(link => {
             link.addEventListener('click', function(e) {
                 if (this.getAttribute('href') === '#' || this.hasAttribute('data-section')) {
                     e.preventDefault();
-                    
-                    // 获取目标部分
                     const sectionId = this.getAttribute('data-section');
-                    
-                    // 显示目标部分
                     if (sectionId) {
                         showSection(sectionId);
                     }
-                    
-                    // 关闭侧边栏
                     toggleNewSidebar();
                 }
             });
         });
         
-        // 导航链接点击事件
         document.querySelectorAll('.nav-links a').forEach(link => {
             link.addEventListener('click', function(e) {
                 e.preventDefault();
-                
-                // 移除所有活动的导航链接
                 document.querySelectorAll('.nav-links a').forEach(item => {
                     item.classList.remove('active');
                 });
-                
-                // 添加活动类到当前链接
                 this.classList.add('active');
-                
-                // 获取目标部分
                 const sectionId = this.getAttribute('data-section');
-                
-                // 显示目标部分
                 if (sectionId) {
                     showSection(sectionId);
                 }
             });
         });
         
-        // 修复页脚链接点击事件
         document.querySelectorAll('.footer-links a').forEach(link => {
             link.addEventListener('click', function(e) {
-                // 检查是否有 data-section 属性（内部链接）
                 if (this.hasAttribute('data-section')) {
                     e.preventDefault();
-                    
-                    // 获取目标部分
                     const sectionId = this.getAttribute('data-section');
-                    
-                    // 移除所有活动的导航链接
                     document.querySelectorAll('.nav-links a').forEach(item => {
                         item.classList.remove('active');
                     });
-                    
-                    // 添加活动类到对应的导航链接
                     document.querySelectorAll('.nav-links a').forEach(item => {
                         if (item.getAttribute('data-section') === sectionId) {
                             item.classList.add('active');
                         }
                     });
-                    
-                    // 显示目标部分
                     if (sectionId) {
                         showSection(sectionId);
                     }
                 }
-                // 没有 data-section 属性的链接（外部链接）会正常跳转
             });
         });
         
-        // 显示指定部分
         function showSection(sectionId) {
-            // 隐藏所有内容部分
             document.querySelectorAll('.content-section').forEach(section => {
                 section.classList.remove('active');
             });
-            
-            // 显示目标部分
             document.getElementById(`${sectionId}-section`).classList.add('active');
-            
-            // 滚动到顶部
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
         
         // 选项卡功能
         document.querySelectorAll('.tab-button').forEach(button => {
             button.addEventListener('click', function() {
-                // 获取选项卡ID
                 const tabId = this.getAttribute('data-tab');
-                
-                // 移除所有活动的选项卡按钮
                 document.querySelectorAll('.tab-button').forEach(btn => {
                     btn.classList.remove('active');
                 });
-                
-                // 添加活动类到当前按钮
                 this.classList.add('active');
-                
-                // 隐藏所有选项卡内容
                 document.querySelectorAll('.tab-content').forEach(content => {
                     content.classList.remove('active');
                 });
-                
-                // 显示当前选项卡内容
                 document.getElementById(tabId).classList.add('active');
-                
-                // 如果切换到第一个选项卡（包含iframe），显示加载状态
                 if (tabId === 'tab1') {
                     showIframeLoading();
                 }
             });
         });
         
-        // iframe相关函数
+        // iframe 相关函数
         function iframeLoaded() {
-            // iframe加载完成后隐藏加载动画
             document.getElementById('iframe-loading').style.display = 'none';
         }
         
+        function iframeLoadError() {
+            document.getElementById('iframe-loading').innerHTML = '<p style="color: red;">加载失败，请稍后重试或<a href="http://lhy.cpolar.top" target="_blank">直接访问</a></p>';
+        }
+        
         function showIframeLoading() {
-            // 显示iframe加载动画
             document.getElementById('iframe-loading').style.display = 'flex';
         }
         
         function refreshIframe() {
-            // 刷新iframe
             const iframe = document.getElementById('external-site');
             iframe.src = iframe.src;
             showIframeLoading();
         }
         
         function openInNewTab() {
-            // 在新标签页中打开iframe中的网站
             window.open('http://lhy.cpolar.top', '_blank');
         }
         
         // 联系表单提交处理
         document.querySelector('.contact-form').addEventListener('submit', function(e) {
             e.preventDefault();
-            
-            // 获取表单数据
             const name = document.getElementById('name').value;
             const email = document.getElementById('email').value;
             const subject = document.getElementById('subject').value;
             const message = document.getElementById('message').value;
             
-            // 简单验证
             if (!name || !email || !message) {
                 alert('请填写所有必填字段！');
                 return;
             }
-            
-            // 模拟表单提交
             alert(`感谢 ${name} 的留言！我会尽快通过 ${email} 回复您。`);
-            
-            // 重置表单
             this.reset();
         });
         
-        // 初始化页面
+        // 初始化
         document.addEventListener('DOMContentLoaded', function() {
-            // 默认显示首页
             showSection('home');
-            
-            // 添加表单控件焦点效果
             const formControls = document.querySelectorAll('.form-control');
             formControls.forEach(control => {
                 control.addEventListener('focus', function() {
                     this.style.borderColor = 'var(--gradient-blue-2)';
                     this.style.boxShadow = '0 0 0 3px rgba(38, 208, 206, 0.2)';
                 });
-                
                 control.addEventListener('blur', function() {
                     this.style.borderColor = '#e0e0e0';
                     this.style.boxShadow = 'none';
                 });
             });
-            
-            // 如果直接访问论坛页面，显示iframe加载状态
             if (window.location.hash === '#forum') {
                 showIframeLoading();
             }
